@@ -1,0 +1,107 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('http://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  margin: 0;
+  color: #222;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+
+/* Layout */
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+article {
+  width: 980px;
+  height: 600px;
+}
+.heading {
+  text-align: center;
+  height: 100px;
+}
+.heading span {
+  color: red;
+  margin-top: 10px;
+  display: block;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+.heading h1 {
+  font-size: 36px;
+  margin-top: 0;
+}
+.heading h1 em {
+  position: relative;
+  font-style: normal;
+}
+
+.heading h1 em::after {
+  content: url(../images/logo-kakao.png);
+  position: absolute;
+  bottom: 50%;
+  left: 90%;
+}
+.content {
+  display: flex;
+  height: 500px;
+}
+.content > div {
+  width: 50%;
+  height: inherit;
+  box-sizing: border-box;
+}
+.accordion {
+
+}
+
+.title {
+  border: 1px solid #ddd ;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  margin-top: 20px;
+  padding-left: 15px;
+}
+.title::after {
+  content: '\f105';
+  position: absolute;
+  font-family: fontawesome;
+  right: 10px;
+  top: 8px;
+  transition: 0.3s;
+}
+
+.title.active,
+.title:hover {
+  background-color: navy;
+  color: #fff;
+}
+.title.active::after {
+  transform: rotate(90deg);
+  color: orange;
+  top: 9px;
+}
+.desc {
+  padding: 15px;
+  display: none;
+}
+
+.desc.active {
+  display: block;
+}
